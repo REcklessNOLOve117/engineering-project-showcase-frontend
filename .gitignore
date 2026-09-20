@@ -1,0 +1,13 @@
+.work/
+.sites-runtime/
+__pycache__/
+*.log
+
+# Local research and generated delivery package
+research/
+ai-project-portal-static.zip
+
+# Local credentials and environment files
+.env
+.env.*
+!.env.example

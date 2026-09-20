@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>制造业通用智能体 · 落地案例 · AI 研发与应用成果</title>
+<meta name="description" content="基于 LangChain 组织业务任务的处理步骤与工具协作，面向制造业开展 Agent / Workflow 应用。">
+<meta name="theme-color" content="#214d6b">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/demos.js" defer></script>
+<script src="../assets/site.js" defer></script><link rel="stylesheet" href="../assets/editorial.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="../index.html" aria-label="AI 研发与应用成果，首页"><span><span class="brand-name">AI 研发与应用成果</span></span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="打开导航菜单"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+<nav class="main-nav" id="main-navigation" aria-label="主导航"><a class="nav-home" href="../index.html">首页</a><a href="../index.html#featured">精选案例</a><a href="../index.html#projects">项目展示 </a></nav>
+</div></header>
+<main id="main">
+<div class="container">
+<nav class="breadcrumb" aria-label="面包屑"><a href="../index.html">首页</a><span class="divider" aria-hidden="true">/</span><a href="../index.html#projects">项目展示</a><span class="divider" aria-hidden="true">/</span><span aria-current="page">制造业通用智能体</span></nav>
+</div>
+<section class="detail-hero">
+<div class="container">
+<h1>制造业通用智能体</h1>
+<p class="detail-lead">基于 LangChain 组织业务任务的处理步骤与工具协作，面向制造业开展 Agent / Workflow 应用。</p>
+<div class="detail-meta">
+<span class="badge badge-delivered">已落地案例</span><span>LangChain</span><span>行业落地案例</span>
+</div>
+<div class="detail-actions"><a class="button button-primary" href="#workflow">了解处理流程 <svg class="arrow" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a></div>
+</div></section>
+<div class="container detail-layout">
+<aside class="detail-sidebar" aria-label="项目目录">
+<p class="toc-label">本页内容</p>
+<nav class="desktop-toc" aria-label="本页目录">
+<ul class="toc-links">
+<li><a href="#overview">案例概况</a></li>
+<li><a href="#workflow">任务处理流程</a></li>
+<li><a href="#approach">Agent 与 Workflow</a></li>
+<li><a href="#value">业务价值与评估</a></li>
+</ul></nav><a class="text-link toc-back" href="../index.html#projects">← 返回项目列表</a></aside>
+<article class="detail-article" aria-label="制造业通用智能体详情">
+<details class="mobile-toc">
+<summary>本页目录</summary>
+<nav aria-label="移动端本页目录">
+<ul class="toc-links">
+<li><a href="#overview">案例概况</a></li>
+<li><a href="#workflow">任务处理流程</a></li>
+<li><a href="#approach">Agent 与 Workflow</a></li>
+<li><a href="#value">业务价值与评估</a></li>
+</ul></nav></details>
+<section class="article-section" id="overview"><h2>案例概况</h2>
+<p>该项目已在制造业场景落地，以业务任务为起点，基于 LangChain 组织 Agent / Workflow 的处理步骤与工具协作。当前技术路径不依赖 RAG。</p>
+<div class="info-grid">
+<div class="info-block">
+<h3>任务驱动</h3>
+<p>围绕业务任务明确输入条件和预期输出，组织对应的处理步骤。</p>
+</div>
+<div class="info-block">
+<h3>流程与工具协作</h3>
+<p>根据任务特点选择处理步骤，将需要的工具纳入工作流。</p>
+</div>
+</div></section>
+<section class="article-section" id="workflow"><h2>任务处理流程</h2>
+<p>以下流程示意概括任务输入、处理与输出之间的关系，用于说明案例的业务处理方式。</p>
+<div class="concept-visual">
+<p class="concept-caption">制造业智能体 · 流程示意</p>
+<div class="flow">
+<div class="flow-step">
+<span class="step-no">01</span>
+<h3>明确任务</h3>
+<p>识别输入、目标、约束和完成条件。</p>
+</div>
+<div class="flow-step">
+<span class="step-no">02</span>
+<h3>组织处理步骤</h3>
+<p>通过 Agent 或 Workflow 调用对应工具并处理信息。</p>
+</div>
+<div class="flow-step">
+<span class="step-no">03</span>
+<h3>形成业务结果</h3>
+<p>汇总执行产出，供使用者检查并继续处理。</p>
+</div>
+</div>
+</div></section>
+<section class="article-section" id="approach"><h2>Agent 与 Workflow</h2>
+<p>项目以 Agent / Workflow 组织业务处理。两种方式分别适用于需要动态组织步骤的任务，以及输入输出明确、按既定顺序处理的任务。</p>
+<div class="info-grid">
+<div class="info-block">
+<h3>Agent</h3>
+<p>适合需要根据上下文选择处理步骤和工具的任务。</p>
+</div>
+<div class="info-block">
+<h3>Workflow</h3>
+<p>适合步骤和输入输出较明确、需要按既定顺序处理的任务。</p>
+</div>
+</div>
+<h3>LangChain 作为实现基础</h3>
+<p>使用 LangChain 组织模型与工具相关逻辑，衔接业务任务中的处理步骤。该项目采用不依赖 RAG 的技术路径。</p></section>
+<section class="article-section" id="value"><h2>业务价值与评估</h2>
+<p>案例围绕业务任务组织输入、执行和结果。任务目标、工具协作和结果复核是理解其应用方式的三个重点。</p>
+<div class="result-table-wrap">
+<table class="result-table">
+<thead>
+<tr>
+<th scope="col">项目</th>
+<th scope="col">内容与口径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">任务目标</th>
+<td>描述要完成的工作，以及完成任务需要满足的条件。</td>
+</tr>
+<tr>
+<th scope="row">执行过程</th>
+<td>说明工具调用、工作流步骤和需要人工检查的环节。</td>
+</tr>
+<tr>
+<th scope="row">实际产出</th>
+<td>结合业务结果判断任务完成情况，检查产出是否满足预期目标。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="source-note">本页展示已落地的制造业智能体案例，流程图为处理逻辑示意。</p></section></article>
+</div>
+<section class="related">
+<div class="container">
+<div class="related-heading">
+<h2>继续探索</h2>
+<a class="text-link" href="../index.html#projects">全部项目 <svg class="arrow" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a>
+</div>
+<div class="related-grid">
+<a class="related-card" href="knowledge-agent.html">
+<div>
+<small>已落地案例</small><strong>本地知识应用智能体</strong>
+</div>
+<svg class="arrow" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a><a class="related-card" href="coding-agent.html">
+<div>
+<small>研发与评测</small><strong>科研院所私有化辅助编程</strong>
+</div>
+<svg class="arrow" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a>
+</div>
+</div></section></main>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-main">
+<div>
+<a class="brand" href="../index.html"><span class="brand-name">AI 研发与应用成果</span></a>
+<p class="footer-copy">模型研发、行业应用与训练工程的项目实践。</p>
+</div>
+<nav class="footer-links" aria-label="页脚项目导航"><a href="manufacturing-agent.html">制造业通用智能体</a><a href="knowledge-agent.html">本地知识应用智能体</a><a href="model-training.html">行业模型训练与优化</a><a href="world-model.html">世界模型与 Policy</a><a href="coding-agent.html">科研院所私有化辅助编程</a></nav>
+</div>
+<div class="footer-bottom"><span>案例采用脱敏材料，验证演示与研发阶段分别标注。</span></div>
+</div></footer>
+</body>
+</html>

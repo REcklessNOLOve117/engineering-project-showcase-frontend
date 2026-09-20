@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>世界模型与 Policy · AI 研发与应用成果</title>
+<meta name="description" content="连接视觉、语言与动作，通过策略输出和未来状态预测，探索多模态建模与具身智能。">
+<meta name="theme-color" content="#214d6b">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/demos.js" defer></script>
+<script src="../assets/site.js" defer></script><link rel="stylesheet" href="../assets/editorial.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="../index.html" aria-label="AI 研发与应用成果，首页"><span><span class="brand-name">AI 研发与应用成果</span></span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="打开导航菜单"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+<nav class="main-nav" id="main-navigation" aria-label="主导航"><a class="nav-home" href="../index.html">首页</a><a href="../index.html#featured">精选案例</a><a href="../index.html#projects">项目展示 </a></nav>
+</div></header>
+<main id="main">
+<div class="container">
+<nav class="breadcrumb" aria-label="面包屑"><a href="../index.html">首页</a><span class="divider" aria-hidden="true">/</span><a href="../index.html#projects">项目展示</a><span class="divider" aria-hidden="true">/</span><span aria-current="page">世界模型与 Policy</span></nav>
+</div>
+<section class="detail-hero">
+<div class="container">
+<h1>世界模型与 Policy</h1>
+<p class="detail-lead">连接视觉、语言与动作，通过策略输出和未来状态预测，探索多模态建模与具身智能。</p>
+<div class="detail-meta">
+<span class="badge ">验证演示 / 研发中</span><span>四条技术路线</span><span>模型研发与优化</span>
+</div>
+<div class="detail-actions">
+<a class="button button-primary" data-demo="worldModel" href="https://recklessnolove117.github.io/neural-twin-static-demo/" target="_blank" rel="noopener noreferrer">打开演示 <span aria-hidden="true">↗</span><span class="sr-only">（新标签页）</span></a><a class="button button-secondary" href="#routes">查看技术路线</a>
+</div>
+</div></section>
+<div class="container detail-layout">
+<aside class="detail-sidebar" aria-label="项目目录">
+<p class="toc-label">本页内容</p>
+<nav class="desktop-toc" aria-label="本页目录">
+<ul class="toc-links">
+<li><a href="#overview">项目概览</a></li>
+<li><a href="#multimodal">多模态结构与建模语义</a></li>
+<li><a href="#routes">四条技术路线</a></li>
+<li><a href="#evidence">一次推理的完整记录</a></li>
+<li><a href="#scaling">多模态 scaling 研究方向</a></li>
+</ul></nav><a class="text-link toc-back" href="../index.html#projects">← 返回项目列表</a></aside>
+<article class="detail-article" aria-label="世界模型与 Policy详情">
+<details class="mobile-toc">
+<summary>本页目录</summary>
+<nav aria-label="移动端本页目录">
+<ul class="toc-links">
+<li><a href="#overview">项目概览</a></li>
+<li><a href="#multimodal">多模态结构与建模语义</a></li>
+<li><a href="#routes">四条技术路线</a></li>
+<li><a href="#evidence">一次推理的完整记录</a></li>
+<li><a href="#scaling">多模态 scaling 研究方向</a></li>
+</ul></nav></details>
+<section class="article-section" id="overview"><h2>项目概览</h2>
+<p>世界模型预测动作发生后的场景变化，Policy 生成面向任务的动作。该专题围绕二者的结合，呈现多模态建模、策略验证与训练优化的研究进展。</p>
+<div class="info-grid">
+<div class="info-block">
+<h3>观察模型行为</h3>
+<p>将指令、输入场景、动作块和未来预测放在同一上下文中，便于理解策略与环境变化的关系。</p>
+</div>
+<div class="info-block">
+<h3>比较不同技术路线</h3>
+<p>以 OpenSora、WAN、LingbotVA 和 Cosmos 为四条路线，分别标注验证、研发或引入阶段。</p>
+</div>
+</div></section>
+<section class="article-section" id="multimodal"><h2>多模态结构与建模语义</h2>
+<p>关注视觉、语言、动作及时序信息之间的联系：模型如何理解场景与任务，如何给出动作，以及如何预测执行动作后的变化。</p>
+<div class="concept-visual">
+<p class="concept-caption">输入与输出关系 · 功能示意</p>
+<div class="flow">
+<div class="flow-step">
+<span class="step-no">01</span>
+<h3>场景与任务条件</h3>
+<p>视觉观察提供当前场景，语言指令描述目标。</p>
+</div>
+<div class="flow-step">
+<span class="step-no">02</span>
+<h3>策略生成动作</h3>
+<p>Policy 根据条件输出动作序列或动作块。</p>
+</div>
+<div class="flow-step">
+<span class="step-no">03</span>
+<h3>预测未来状态</h3>
+<p>世界模型结合场景与动作，预测后续视觉状态。</p>
+</div>
+</div>
+</div>
+<div class="note">该示意说明现有演示的输入输出关系。各路线的编码、模态交互及内部网络结构，需要结合对应模型实现理解。</div></section>
+<section class="article-section" id="routes"><h2>四条技术路线</h2>
+<p>各路线围绕不同的模型基础与优化方法展开；验证演示、研发中和引入中的进展分别呈现。</p>
+<div data-route-tabs>
+<div class="route-tabs" role="tablist" aria-label="世界模型技术路线" hidden>
+<button class="route-tab" type="button" id="tab-opensora" role="tab" aria-controls="panel-opensora" aria-selected="true">OpenSora</button><button class="route-tab" type="button" id="tab-wan" role="tab" aria-controls="panel-wan" aria-selected="false">WAN</button><button class="route-tab" type="button" id="tab-lingbotva" role="tab" aria-controls="panel-lingbotva" aria-selected="false">LingbotVA</button><button class="route-tab" type="button" id="tab-cosmos" role="tab" aria-controls="panel-cosmos" aria-selected="false">Cosmos</button>
+</div>
+<div class="route-panels no-js">
+<section class="route-panel" role="tabpanel" id="panel-opensora" aria-labelledby="tab-opensora" tabindex="0"><span class="badge ">验证演示</span>
+<h3>OpenSora 训练与验证路线</h3>
+<p>围绕 OpenSora 与 VLA 的训练和联合验证，关注训练适配及视觉、语言、动作之间的建模关系。</p>
+<dl>
+<dt>技术重点</dt>
+<dd>ColossalAI 适配、国产化方向与训练流程。</dd>
+<dt>验证内容</dt>
+<dd>已提供 Coffee 场景的策略输出与世界模型预测回放。</dd>
+<dt>当前阶段</dt>
+<dd>已有验证演示，尚未正式交付。</dd>
+</dl></section>
+<section class="route-panel" role="tabpanel" id="panel-wan" aria-labelledby="tab-wan" tabindex="0"><span class="badge ">验证演示</span>
+<h3>WAN 策略优化路线</h3>
+<p>结合 RLinf 框架开展 VLA 优化，关注长时序预测中误差累积对策略表现的影响。</p>
+<dl>
+<dt>技术重点</dt>
+<dd>KIR 错误累积优化及 WoVR 相关机制。</dd>
+<dt>验证内容</dt>
+<dd>以同任务、同条件下的优化前后对比作为验证方向。</dd>
+<dt>当前阶段</dt>
+<dd>已有验证演示，尚未正式交付。</dd>
+</dl></section>
+<section class="route-panel" role="tabpanel" id="panel-lingbotva" aria-labelledby="tab-lingbotva" tabindex="0"><span class="badge badge-amber">研发中</span>
+<h3>端到端 Policy 平台与优化</h3>
+<p>探索端到端策略平台，将多模态输入、策略输出和优化过程组织在同一研究方向下。</p>
+<dl>
+<dt>技术重点</dt>
+<dd>端到端 Policy 的建模与优化。</dd>
+<dt>验证内容</dt>
+<dd>当前阶段为平台研发。</dd>
+<dt>当前阶段</dt>
+<dd>研发中。</dd>
+</dl></section>
+<section class="route-panel" role="tabpanel" id="panel-cosmos" aria-labelledby="tab-cosmos" tabindex="0"><span class="badge badge-amber">引入中</span>
+<h3>Cosmos3 与框架引入</h3>
+<p>围绕 Cosmos3 和 Cosmos framework，开展端到端 Policy 系统与训练框架的引入。</p>
+<dl>
+<dt>技术重点</dt>
+<dd>框架适配与 SFT recipe。</dd>
+<dt>验证内容</dt>
+<dd>后续围绕训练流程和任务表现进行验证。</dd>
+<dt>当前阶段</dt>
+<dd>引入中。</dd>
+</dl></section>
+</div>
+</div></section>
+<section class="article-section" id="evidence"><h2>一次推理的完整记录</h2>
+<p>现有 Neural Twin 演示保存了 Coffee 场景的一次推理：OpenVLA-OFT 输出 8×7 动作块，OpenSora Coffee World Model 据此预测未来 8 帧。预测时间轴与动作数值可联动查看。</p>
+<div class="evidence-metrics">
+<div class="metric">
+<div class="metric-value">8 × 7</div>
+<div class="metric-label">策略动作块</div>
+</div>
+<div class="metric">
+<div class="metric-value">8<em>帧</em>
+</div>
+<div class="metric-label">未来状态预测</div>
+</div>
+<div class="metric">
+<div class="metric-value">3.433<em>秒</em>
+</div>
+<div class="metric-label">该次记录的端到端耗时</div>
+</div>
+</div>
+<figure class="evidence-figure"><button class="image-zoom" type="button" aria-label="放大图片：世界模型与策略联合验证的演示首页" data-caption="世界模型与策略联合验证的演示首页"><img src="../assets/images/world-model.webp" width="1265" height="712" alt="世界模型与策略联合验证的演示首页" loading="lazy"><span class="zoom-label"><svg viewbox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7V3h4m6 0h4v4M3 13v4h4m6 0h4v-4"></path></svg>放大查看</span></button>
+<figcaption>现有演示站截图。演示内容为已保存的推理结果，可切换预测帧并查看动作。</figcaption></figure>
+<div class="detail-actions"><a class="button button-primary" data-demo="worldModel" href="https://recklessnolove117.github.io/neural-twin-static-demo/" target="_blank" rel="noopener noreferrer">打开演示 <span aria-hidden="true">↗</span><span class="sr-only">（新标签页）</span></a></div>
+<div class="note">运行记录：NVIDIA H20 / BF16。3.433 秒属于该次记录；页面中的 221 步 HDF5 源轨迹与 8 步策略输出分开展示。当前页面不调用模型服务。</div>
+<p class="source-note">国产化与 ColossalAI 适配为该方向的技术重点，上述 H20 运行记录仅说明这次演示环境。</p></section>
+<section class="article-section" id="scaling"><h2>多模态 scaling 研究方向</h2>
+<p>研究重点是不同规模的模型、数据与预测时域如何影响任务表现，并把效果与计算开销放在同一条件下比较。</p>
+<div class="info-grid">
+<div class="info-block">
+<h3>模型与数据规模</h3>
+<p>关注参数规模、数据量和场景覆盖的变化，结合任务指标分析收益。</p>
+</div>
+<div class="info-block">
+<h3>时序与误差累积</h3>
+<p>关注预测时域增长后的状态偏差，以及优化机制对策略表现的影响。</p>
+</div>
+<div class="info-block">
+<h3>语义与动作对齐</h3>
+<p>观察语言目标、视觉场景和动作输出之间的一致性，分析任务理解与执行偏差。</p>
+</div>
+<div class="info-block">
+<h3>效果与计算成本</h3>
+<p>在明确硬件、精度和任务设置的前提下，对比训练或推理资源消耗。</p>
+</div>
+</div>
+<p class="source-note">本节描述研究问题，不代表已经形成跨规模的实验结论。</p></section></article>
+</div>
+<section class="related">
+<div class="container">
+<div class="related-heading">
+<h2>继续探索</h2>
+<a class="text-link" href="../index.html#projects">全部项目 <svg class="arrow" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a>
+</div>
+<div class="related-grid">
+<a class="related-card" href="model-training.html">
+<div>
+<small>已落地案例</small><strong>行业模型训练与优化</strong>
+</div>
+<svg class="arrow" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a><a class="related-card" href="coding-agent.html">
+<div>
+<small>研发与评测</small><strong>科研院所私有化辅助编程</strong>
+</div>
+<svg class="arrow" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a>
+</div>
+</div></section></main>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-main">
+<div>
+<a class="brand" href="../index.html"><span class="brand-name">AI 研发与应用成果</span></a>
+<p class="footer-copy">模型研发、行业应用与训练工程的项目实践。</p>
+</div>
+<nav class="footer-links" aria-label="页脚项目导航"><a href="manufacturing-agent.html">制造业通用智能体</a><a href="knowledge-agent.html">本地知识应用智能体</a><a href="model-training.html">行业模型训练与优化</a><a href="world-model.html">世界模型与 Policy</a><a href="coding-agent.html">科研院所私有化辅助编程</a></nav>
+</div>
+<div class="footer-bottom"><span>案例采用脱敏材料，验证演示与研发阶段分别标注。</span></div>
+</div></footer>
+</body>
+</html>
