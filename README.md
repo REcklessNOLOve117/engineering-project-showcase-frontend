@@ -20,7 +20,17 @@
 python -m http.server 4173 --bind 127.0.0.1 --directory dist
 ```
 
-第一版仅在本地预览，没有发布公网。部署时复制整个 `dist/` 的内容到静态站点目录即可；所有内部页面、图片和脚本均使用相对路径，支持部署在网站子目录中。建议使用 HTTP 预览，不依赖直接双击 HTML 的浏览器行为。
+所有内部页面、图片和脚本均使用相对路径，支持本地 HTTP 预览和部署在网站子目录中。建议使用 HTTP 预览，不依赖直接双击 HTML 的浏览器行为。
+
+## GitHub Pages 部署
+
+访问地址：[AI 研发与应用成果](https://recklessnolove117.github.io/engineering-project-showcase-frontend/)。
+
+部署工作流为 `.github/workflows/deploy-pages.yml`，将 `dist/` 内的文件直接发布到站点根路径，无需安装依赖或执行构建。仓库的 **Settings → Pages → Build and deployment → Source** 应设为 **GitHub Actions**。
+
+向 `master` 推送 `dist/` 或部署工作流的修改后，会自动发布；也可在 **Actions → Deploy frontend to GitHub Pages → Run workflow** 手动部署。只发布 `dist/`，README、验收记录和历史页面截图不属于线上站点内容。
+
+不要将 Pages 设置为从 `master` 的根目录发布：根目录没有网站入口，GitHub 会把 README 渲染成首页。真正的网站入口是 `dist/index.html`，由工作流发布后对应上述访问地址。
 
 ## 页面与文件
 
